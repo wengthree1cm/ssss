@@ -13,11 +13,11 @@ public class MarkdownParseTest {
 
     @Test
     public void get() throws IOException{
-        Path fileName = Path.of("test-file4.md");
+        Path fileName = Path.of("test-file8.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
 	    System.out.println(links);
-        assertEquals(0,links.size());
+        assertEquals("a link on the first line",links.get(0));
     }
 
 
